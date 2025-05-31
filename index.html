@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Idle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="deck" id="deck"></div>
+        <div class="drawn-cards" id="drawnCards"></div>
+    </div>
+    <div class="controls">
+        <input type="number" id="drawCount" min="1" max="52" value="1" style="width:60px; margin-right:10px;">
+        <button id="drawCardButton">Draw a Card</button>
+        <button id="reshuffleButton">Reshuffle</button>
+    </div>
+    <div class="design-select">
+        <label for="cardBackDesign">Card Back:</label>
+        <select id="cardBackDesign">
+            <option value="classic">Classic</option>
+            <option value="dark">Emo</option>
+            <option value="retro">Strippy Orange</option>
+            <option value="pattern1">Strippy Black</option>
+            <option value="pattern2">Strippy Red</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+        </select>
+    </div>
+    <div class="deckEditorControls">
+        <button id="editDeckButton" style="margin-top: 10px;">Edit Deck Composition</button>
+    </div>
+    <div id="deckEditorMenu" class="deck-editor-menu" style="display:none;">
+        <div class="deck-editor-content">
+            <h3>Edit Deck Composition</h3>
+            <div id="deckEditorCards"></div>
+            <div style="margin-bottom:10px;">
+                <button id="setAllZeroButton" type="button">Set All to 0</button>
+                <button id="resetDeckEditorButton" type="button">Reset</button>
+            </div>
+            <button id="saveDeckButton">Save</button>
+            <button id="closeDeckEditorButton">Cancel</button>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
